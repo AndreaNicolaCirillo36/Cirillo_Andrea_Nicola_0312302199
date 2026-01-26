@@ -1,0 +1,295 @@
+/*
+  styles.css
+  Project Work (PW 17): identita visiva, layout responsive, focus accessibile.
+  I commenti descrivono layout, tipografia e componenti principali.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+/* Base: tipografia, palette e sfondo coerenti con il tema agro-sostenibile */
+body {
+    margin: 0;
+    font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top, #f8efe3 0%, #f1f5f2 45%, #eef2f5 100%);
+    color: #1f2a24;
+    line-height: 1.6;
+}
+
+/* Container: larghezza massima per la leggibilita e centratura */
+.container {
+    width: 90%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* Skip link: visibile al focus per accesso rapido al contenuto */
+.skip-link {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: #ffffff;
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #000;
+    transform: translateY(-200%);
+    z-index: 5;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+/* Header hero: gradiente, badge informativi e dati sintetici */
+.site-header {
+    background: linear-gradient(120deg, #154734 0%, #2f5e4b 45%, #3f7a5f 100%);
+    color: #ffffff;
+    padding: 50px 0 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.eyebrow {
+    margin: 0;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.site-header h1 {
+    font-family: "Fraunces", "Times New Roman", serif;
+    font-size: clamp(32px, 4vw, 54px);
+    margin: 10px 0 12px;
+}
+
+.hero-badge {
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(255, 255, 255, 0.14);
+    padding: 8px 14px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+}
+
+.subtitle {
+    font-size: 18px;
+    max-width: 640px;
+    margin-bottom: 24px;
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 16px;
+    border-radius: 16px;
+    backdrop-filter: blur(4px);
+}
+
+.stat-label {
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    margin: 4px 0 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Card di sezione: contenitori con ombra per separare i blocchi */
+.card {
+    background-color: #ffffff;
+    padding: 26px;
+    margin: 26px 0;
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(17, 47, 30, 0.08);
+}
+
+/* Separatore: linea sottile per guidare la scansione verticale */
+.section-separator {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(31, 42, 36, 0.18), transparent);
+    margin: 4px 0 18px;
+}
+
+.intro {
+    border-left: 6px solid #3f7a5f;
+}
+
+.pill-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.pill {
+    background: #edf3ee;
+    color: #2f5e4b;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Griglia ESG: colonne adattive per mantenere equilibrio visivo */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.feature {
+    background: #f6f7f4;
+    padding: 18px;
+    border-radius: 14px;
+    border: 1px solid #e1e7e1;
+}
+
+.feature h3 {
+    margin-top: 0;
+    font-family: "Fraunces", "Times New Roman", serif;
+    font-size: 18px;
+}
+
+/* Pulsanti: CTA primaria (ultimo report) + variante secondaria (archivio) */
+.btn {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 10px 15px;
+    background-color: #f1c453;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(241, 196, 83, 0.35);
+}
+
+.btn-secondary {
+    background-color: #2f5e4b;
+}
+
+.btn-secondary:hover {
+    box-shadow: 0 8px 16px rgba(47, 94, 75, 0.3);
+}
+
+/* Card report: gerarchia visiva e azione di download evidente */
+.report {
+    background: linear-gradient(180deg, #ffffff 0%, #f8f5ee 100%);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #efe7d6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+}
+
+.report h3 {
+    margin: 8px 0;
+    font-family: "Fraunces", "Times New Roman", serif;
+}
+
+/* Griglia report: mantiene le card allineate e bilanciate */
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.report-tag {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #b58108;
+    font-weight: 600;
+    margin: 0;
+}
+
+.report-tag.muted {
+    color: #4a6b5c;
+}
+
+.report-note {
+    margin: 0;
+    color: #4f5b55;
+    font-size: 14px;
+}
+
+/* Nota evidenziata: segnala l'ultimo report disponibile */
+.notice {
+    background: #fff6e2;
+    border-left: 4px solid #f1c453;
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: #6b4b00;
+    font-size: 14px;
+}
+
+/* Evidenziazione obiettivi: card con accento visivo dedicato */
+.highlight {
+    background: linear-gradient(120deg, rgba(63, 122, 95, 0.12), rgba(241, 196, 83, 0.12));
+    border: 1px solid rgba(63, 122, 95, 0.2);
+}
+
+/* Focus accessibile: evidenzia chiaramente l'elemento attivo */
+a:focus {
+    outline: 3px solid rgba(241, 196, 83, 0.6);
+    outline-offset: 3px;
+}
+
+/* Footer: chiusura con riepilogo accademico e contrasto elevato */
+.site-footer {
+    text-align: center;
+    padding: 22px;
+    background-color: #1e3f31;
+    margin-top: 40px;
+    color: #e9efe9;
+}
+
+.footer-note {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: rgba(233, 239, 233, 0.7);
+}
+
+/* Media query: layout piu compatto su schermi piccoli */
+@media (max-width: 720px) {
+    .hero-badge {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px 21px;
+        font-size: 11px;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 22px;
+    }
+}
+
+

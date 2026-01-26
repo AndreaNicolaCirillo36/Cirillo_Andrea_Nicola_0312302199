@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!--
+        index.html
+        Project Work: Tecnologia web per la sostenibilita d'impresa (PW 17)
+        Scelte: struttura semantica (header/main/section/footer) e card per i contenuti
+        Accessibilita: skip-link, gerarchia titoli chiara, link esterni con rel
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title: etichetta della scheda e riferimento per i motori di ricerca -->
+    <title>Report di Sostenibilità | Bonifiche Ferraresi</title>
+
+    <!-- Meta description: sintesi del contenuto per indicizzazione -->
+    <meta name="description"
+          content="Pagina web per consultare e scaricare i report di sostenibilità di Bonifiche Ferraresi.">
+
+    <!-- CSS locale e font esterni (preconnect per performance) -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- Skip-link: salto rapido al main per la navigazione da tastiera -->
+    <a class="skip-link" href="#contenuto">Vai al contenuto principale</a>
+
+    <!-- Header hero: contesto accademico, azienda e obiettivo della pagina -->
+    <header class="site-header">
+        <div class="container">
+            <div class="hero-badge">
+                <span>PROJECT WORK</span>
+                <span>CdS Informatica per le Aziende Digitali (L-31)</span>
+            </div>
+            <p class="eyebrow">Settore primario • Agricoltura</p>
+            <h1>Bonifiche Ferraresi</h1>
+            <p class="subtitle">
+                Pagina informativa per la divulgazione delle attività di sostenibilità
+                e il download dei report ufficiali
+            </p>
+            <!-- Dati sintetici per inquadrare focus, tema e traccia -->
+            <div class="hero-stats">
+                <div>
+                    <p class="stat-label">Focus</p>
+                    <p class="stat-value">Sostenibilità d’impresa</p>
+                </div>
+                <div>
+                    <p class="stat-label">Tema</p>
+                    <p class="stat-value">Tecnologia web</p>
+                </div>
+                <div>
+                    <p class="stat-label">Traccia</p>
+                    <p class="stat-value">PW 17</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main: sezioni tematiche in card per una lettura guidata -->
+    <main id="contenuto" class="container">
+
+        <!-- Sezione profilo: contesto aziendale + parole chiave per orientare il lettore -->
+        <section class="card intro">
+            <h2>Contesto aziendale</h2>
+            <p>
+                Bonifiche Ferraresi è un’impresa agricola italiana operante nel settore
+                primario, con una particolare attenzione alla gestione sostenibile delle
+                risorse naturali e al rapporto con il territorio.
+            </p>
+            <div class="pill-group">
+                <span class="pill">Tutela del suolo</span>
+                <span class="pill">Risorsa idrica</span>
+                <span class="pill">Filiera responsabile</span>
+            </div>
+        </section>
+        <div class="section-separator" aria-hidden="true"></div>
+
+        <!-- Sezione iniziative: macro-aree ESG presentate in card <article> -->
+        <section class="card">
+            <h2>Principali iniziative di sostenibilità</h2>
+            <div class="grid">
+                <article class="feature">
+                    <h3>Ambiente</h3>
+                    <p>Tutela del suolo, gestione responsabile dell’acqua e pratiche agricole a basso impatto.</p>
+                </article>
+                <article class="feature">
+                    <h3>Sociale</h3>
+                    <p>Sicurezza sul lavoro, formazione continua e valorizzazione del capitale umano.</p>
+                </article>
+                <article class="feature">
+                    <h3>Governance</h3>
+                    <p>Trasparenza, monitoraggio delle attività e reporting costante agli stakeholder.</p>
+                </article>
+            </div>
+        </section>
+        <div class="section-separator" aria-hidden="true"></div>
+
+        <!-- Sezione sintesi: testo riassuntivo dell'ultimo report (DNF 2023) -->
+        <section class="card">
+            <h2>Sintesi dell’ultimo report (DNF 2023)</h2>
+            <p>
+                La Dichiarazione Non Finanziaria 2023 del Gruppo BF, redatta ai sensi del D.Lgs. 254/2016,
+                descrive l’integrazione della sostenibilità nella strategia di filiera: dal presidio dell’asset
+                fondiario alla trasformazione agro‑industriale, con attenzione a tracciabilità, qualità dei
+                prodotti e innovazione agritech. Il documento evidenzia il ruolo della governance e del
+                sistema di gestione dei rischi, oltre al dialogo con gli stakeholder e all’analisi di materialità
+                per individuare le priorità ESG.
+            </p>
+            <p>
+                Sul fronte ambientale, la DNF 2023 approfondisce consumi energetici, emissioni, gestione
+                della risorsa idrica, rifiuti e tutela della biodiversità, con riferimenti alla Tassonomia
+                Europea. Sul fronte sociale, il report dedica spazio a persone, formazione, salute e sicurezza
+                nei luoghi di lavoro, oltre al legame con il territorio e iniziative di alta formazione. Nel
+                complesso, il documento conferma un approccio di filiera responsabile e una rendicontazione
+                strutturata secondo gli standard GRI.
+            </p>
+        </section>
+        <div class="section-separator" aria-hidden="true"></div>
+
+        <!--
+            Sezione download report
+            - Link esterni ai PDF con target _blank
+            - rel="noopener noreferrer" per sicurezza
+        -->
+        <section class="card">
+            <h2>Download dei report di sostenibilità</h2>
+
+            <p>
+                I seguenti collegamenti consentono di accedere ai report di sostenibilità
+                ufficiali pubblicati online dall’azienda.
+            </p>
+            <p class="notice">
+                Nota: al momento della redazione del Project Work, l’ultimo documento disponibile sul sito aziendale risultava la Dichiarazione Non Finanziaria 2023.
+            </p>
+
+            <!-- Card report: titolo, breve descrizione e CTA download -->
+            <div class="report-grid">
+                <div class="report">
+                    <div>
+                        <p class="report-tag">Ultimo disponibile</p>
+                        <h3>Dichiarazione Non Finanziaria 2023</h3>
+                        <p class="report-note">Documento ufficiale con i principali indicatori ESG.</p>
+                    </div>
+                    <a class="btn"
+                       href="https://www.bfspa.it/files/00232/9.gruppobfdnf2023.30.04.24v.definitiva.pdf"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Scarica Report 2023
+                    </a>
+                </div>
+
+                <div class="report">
+                    <div>
+                        <p class="report-tag muted">Archivio</p>
+                        <h3>Dichiarazione Non Finanziaria 2022</h3>
+                        <p class="report-note">Evoluzione delle pratiche di sostenibilità del gruppo.</p>
+                    </div>
+                    <a class="btn btn-secondary"
+                       href="https://www.bfspa.it/files/00232/bfdnf2022.pdf"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Scarica Report 2022
+                    </a>
+                </div>
+
+                <div class="report">
+                    <div>
+                        <p class="report-tag muted">Archivio</p>
+                        <h3>Bilancio di Sostenibilità 2021</h3>
+                        <p class="report-note">Resoconto delle iniziative ambientali e sociali.</p>
+                    </div>
+                    <a class="btn btn-secondary"
+                       href="https://www.bfspa.it/files/00232/bilanciosostenibilita2021.pdf"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Scarica Report 2021
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="section-separator" aria-hidden="true"></div>
+
+        <!-- Sezione obiettivi: requisiti didattici e finalita del progetto -->
+        <section class="card highlight">
+            <h2>Obiettivi del Project Work</h2>
+            <p>
+                Sviluppare una pagina web accessibile e informativa che presenti le attività
+                di sostenibilità dell’impresa e consenta il download dei report ufficiali,
+                dimostrando competenze di programmazione web applicata.
+            </p>
+        </section>
+        <div class="section-separator" aria-hidden="true"></div>
+
+        <!-- Sezione metodologia: passi seguiti per progettazione e sviluppo -->
+        <section class="card">
+            <h2>Metodologia di sviluppo</h2>
+            <p>
+                Analisi della traccia, raccolta delle fonti ufficiali e progettazione di
+                una pagina responsive con sezioni informative, layout a card e collegamenti
+                diretti ai documenti. Il codice è stato organizzato per chiarezza e accessibilità.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer: riepilogo accademico, traccia e dati dello studente -->
+    <footer class="site-footer">
+        <p>Project Work – Corso di Laurea in Informatica per le Aziende Digitali (L-31)</p>
+        <p class="footer-note">Tema 3: Tecnologia web per la sostenibilità d’impresa • Traccia PW 17</p>
+        <p class="footer-note">Andrea Nicola Cirillo • Matricola 0312302199</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
