@@ -168,12 +168,15 @@ body {
 
 /* Pulsanti: CTA primaria (ultimo report) + variante secondaria (archivio) */
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 8px;
     padding: 10px 15px;
     background-color: #f1c453;
     color: #ffffff;
     text-decoration: none;
+    text-align: center;
     border-radius: 999px;
     font-weight: 600;
     letter-spacing: 0.3px;
